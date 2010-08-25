@@ -15,6 +15,7 @@ import android.hardware.SensorManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -53,7 +54,7 @@ public class Homescreen extends Activity {
         if (sp.contains("registered")) {
         	btnRegister.setEnabled(false);
         	btnTests.setEnabled(true);
-        	System.out.println(sp.getInt("registered", 0));
+        	Log.v("HomeScreen", String.valueOf(sp.getInt("registered", 0)));
         } else {
         	btnRegister.setEnabled(true);
         	btnTests.setEnabled(false);

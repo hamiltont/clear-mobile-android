@@ -25,7 +25,7 @@ public class DatabaseAccessor {
 	private SQLiteDatabase myDatabase;
 	private final Context myContext;
 
-	private final static int DATABASE_VERSION = 1; // This is the database version.  When changing it, it will destroy all tables and rebuild them.  Value is irrelevant - just increment it when you make database schema changes.
+	private final static int DATABASE_VERSION = 2; // This is the database version.  When changing it, it will destroy all tables and rebuild them.  Value is irrelevant - just increment it when you make database schema changes.
 
 	/**
 	 * Simple constructor.
@@ -86,9 +86,9 @@ public class DatabaseAccessor {
 			db
 					.execSQL("CREATE TABLE data( _id integer PRIMARY KEY, data text)");
 			db
-					.execSQL("CREATE TABLE tests( _id integer PRIMARY KEY, name text, details text, questions integer)");
+					.execSQL("CREATE TABLE tests( _id integer PRIMARY KEY, name text, details text)");
 			db
-					.execSQL("CREATE TABLE questions( _id integer PRIMARY KEY, data text)");
+					.execSQL("CREATE TABLE questions( _id integer PRIMARY KEY, question text)");
 		}
 
 		@Override

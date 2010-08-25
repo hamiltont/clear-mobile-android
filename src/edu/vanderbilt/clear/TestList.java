@@ -1,6 +1,5 @@
 package edu.vanderbilt.clear;
 
-import java.util.HashMap;
 import java.util.List;
 
 import android.app.ListActivity;
@@ -14,6 +13,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import edu.vanderbilt.clear.network.GetInformation;
+import edu.vanderbilt.clear.objects.Test;
 
 /**
  * List of possible tests, gotten from a server poll.
@@ -22,7 +22,7 @@ import edu.vanderbilt.clear.network.GetInformation;
  */
 public class TestList extends ListActivity {
 	SharedPreferences sp;
-	List<HashMap<String, Object>> tests;
+	List<Test> tests;
 	Context myContext = this;
     @Override
     public void onCreate(Bundle savedInstanceState) {

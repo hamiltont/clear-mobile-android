@@ -54,13 +54,13 @@ public class TestList extends ListActivity {
     	
     	@Override
     	protected void onPostExecute(Void results) {
-    		setListAdapter(new SimpleAdapter(myContext, tests, android.R.layout.simple_list_item_1,new String[]{"name"}, new int[]{android.R.id.text1}));
+    		//setListAdapter(new SimpleAdapter(myContext, tests, android.R.layout.simple_list_item_1,new String[]{"name"}, new int[]{android.R.id.text1}));
     		dlg.dismiss();
     	}
     	
 		@Override
 		protected Void doInBackground(Void... params) {
-			tests = GetInformation.getTests(sp.getInt("registered", 0));
+			//tests = GetInformation.getTests(sp.getInt("registered", 0));
 			return null;
 		}
 		
